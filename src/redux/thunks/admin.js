@@ -1,5 +1,7 @@
 import { server } from "../../config/constants";
 import axios from "axios";
+
+
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const createCourse = createAsyncThunk("/createcourse", async (formData) => {
@@ -79,6 +81,10 @@ const deleteLecture = createAsyncThunk(
         `${server}/api/v1/lecture?courseId=${courseId}&lectureId=${lectureId}`,
         config
       );
+
+
+
+
 
       return data;
     } catch (error) {
